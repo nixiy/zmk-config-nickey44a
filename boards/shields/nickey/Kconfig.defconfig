@@ -1,0 +1,22 @@
+if SHIELD_NICKEY_R
+
+config ZMK_KEYBOARD_NAME
+    default "nickey"
+
+config ZMK_BLE
+    default y
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_NICKEY_R || SHIELD_NICKEY_L
+
+config NFCT_PINS_AS_GPIOS
+    default y
+
+config ZMK_SPLIT
+    default y
+
+endif

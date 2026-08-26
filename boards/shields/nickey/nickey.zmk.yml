@@ -1,0 +1,8 @@
+file_format: "1"
+id: nickey
+name: nickey
+type: shield
+url: https://github.com/nixiy/zmk-config-nickey
+requires: [seeed_xiao]
+features:
+  - keys
