@@ -4,6 +4,7 @@
 / {
     chosen {
         zmk,physical-layout = &physical_layout0;
+        zmk,battery = &vbatt;
     };
 
     physical_layout0: physical_layout_0 {
@@ -83,4 +84,17 @@
                 , <&xiao_d 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
                 ;
     };
+};
+
+&adc {
+    status = "okay";
+};
+
+&vbatt {
+    compatible = "zmk,battery-voltage-divider";
+    io-channels = <&adc 0>;
+    /delete-property/ power-gpios;
+    output-ohms = <470000>;
+    full-ohms = <(1000000 + 470000)>;
+    mv-to-pct-thresholds = <1100 1150 1200 1220 1240 1260 1280 1300 1320 1350 1400>;
 };
