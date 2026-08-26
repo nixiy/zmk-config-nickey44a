@@ -1,7 +1,7 @@
-if SHIELD_NICKEY_R
+if SHIELD_NICKEY44A_R
 
 config ZMK_KEYBOARD_NAME
-    default "nickey"
+    default "nickey44a"
 
 config ZMK_BLE
     default y
@@ -11,7 +11,7 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
-if SHIELD_NICKEY_R || SHIELD_NICKEY_L
+if SHIELD_NICKEY44A_R || SHIELD_NICKEY44A_L
 
 config NFCT_PINS_AS_GPIOS
     default y
