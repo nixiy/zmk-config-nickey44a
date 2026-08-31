@@ -15,7 +15,7 @@
 
 ## 現在のキーマップ
 
-![Nickey44 Keymap](keymap-drawer/nickey.svg)
+![Nickey44 Keymap](keymap-drawer/nickey44a.svg)
 
 ---
 
