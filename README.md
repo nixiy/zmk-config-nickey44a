@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="nickey44a-logo.png" alt="nickey44a logo" width="720">
+</p>
+
 # zmk-config-nickey44a
 
 分割40%ワイヤレス自作キーボード **「Nickey44A」** のZMK Firmware設定リポジトリです。
