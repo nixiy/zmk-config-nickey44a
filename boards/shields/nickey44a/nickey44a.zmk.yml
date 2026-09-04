@@ -1,8 +1,8 @@
 file_format: "1"
-id: nickey
-name: nickey
+id: nickey44a
+name: nickey44a
 type: shield
-url: https://github.com/nixiy/zmk-config-nickey
+url: https://github.com/nixiy/zmk-config-nickey44a
 requires: [seeeduino_xiao_ble]
 features:
   - keys
