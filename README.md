@@ -1,5 +1,14 @@
 # zmk-config-nickey44a
 
+## 特徴
+
+- 44キー・17 mm狭ピッチのオーソリニア配列
+- 左右分割のロープロファイル設計。Kailh Choc v2スイッチに対応
+- ZMK FirmwareとBluetoothによる完全ワイヤレス接続
+- 左右それぞれ単4乾電池1本で動作し、USB充電の管理が不要
+- ボトムからトッププレートまで6.5mmの薄型設計
+- 単4電池、キースイッチ、キャップ込で222g ※KazyCap、Lofree Spector利用時
+
 ## Links
 
 - [ビルドガイド](https://nixiy.github.io/nickey-docs/nickey44a/)
