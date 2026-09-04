@@ -6,6 +6,20 @@
 
 分割40%ワイヤレス自作キーボード **「Nickey44A」** のZMK Firmware設定リポジトリです。
 
+## Nickey44Aについて
+
+- 44キーのオーソリニア配列を採用した左右分割キーボード
+- Bluetooth対応の完全ワイヤレス設計
+- Choc v2スイッチ対応のロープロファイル設計
+- 単4電池で動作
+- ボトムからトッププレートまで6.5mmの薄型設計
+- 電池、キースイッチキャップ込で222gの軽量仕上げ
+
+BOOTHでは、キット版と完成品を取り扱っています。
+
+- [Nickey44A キット版](https://potamega.booth.pm/items/8744351)
+- [Nickey44A 完成品](https://potamega.booth.pm/items/8744204)
+
 セットアップ、ファームウェアの書き込み、Bluetoothペアリングなどの詳しい手順は、[Nickey44A ビルドガイド](https://nixiy.github.io/nickey-docs/nickey44a/)を参照してください。
 
 ---
