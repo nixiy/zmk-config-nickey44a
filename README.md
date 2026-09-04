@@ -1,5 +1,11 @@
 # zmk-config-nickey44a
 
+## Links
+
+- [ビルドガイド](https://nixiy.github.io/nickey-docs/nickey44a/)
+- [キット版 (BOOTH)](https://potamega.booth.pm/items/8744351)
+- [完成品 (BOOTH)](https://potamega.booth.pm/items/8744204)
+
 分割40%ワイヤレス自作キーボード **「Nickey44A」** のZMK Firmware設定リポジトリです。
 
 ---
