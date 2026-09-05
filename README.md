@@ -56,3 +56,10 @@ Keymap Editorでの変更をCommit（または `main` ブランチへPush）す�
 ## 📄 ライセンス
 
 This repository is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### 第三者ライセンス
+
+Nickey44A の昇圧回路は、cormoran 氏が [DYA Dash の回路設計解説](https://note.com/cormoran/n/n1e45fe7471d8) で紹介している、各種保護機能付き昇圧回路を参考にしています。DYA Dash の回路図（`*.kicad_sch`）は MIT License で提供されています。
+
+- Copyright (c) 2025 cormoran
+- ライセンス全文: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)
