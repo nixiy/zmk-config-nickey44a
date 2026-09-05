@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/cormoran
     - name: caksoylar  # <-- RGB LED
       url-base: https://github.com/caksoylar
+    - name: sekigon-gonnoc
+      url-base: https://github.com/sekigon-gonnoc
   projects:
     - name: zmk
       remote: cormoran
@@ -14,5 +16,8 @@ manifest:
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: 8756cb7b8114069fa3c25c6f6c990f24988fceff # v0.3
+    - name: zmk-driver-iqs7211e
+      remote: sekigon-gonnoc
+      revision: 436d3c42172abf812ec104521f29384fc02fc50e
   self:
     path: config

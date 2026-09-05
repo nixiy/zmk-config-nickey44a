@@ -53,6 +53,22 @@ Keymap Editorでの変更をCommit（または `main` ブランチへPush）す�
 
 ---
 
+## IQS7211E Trackpad（experimental）
+
+右手側のみ、sekigon-gonnoc IQS7211E low-power circular trackpad を実験的にサポートします。
+
+- I2C address: `0x56`
+- SDA: P0.09 / NFC1
+- SCL: P0.10 / NFC2
+- RDY: P0.16
+- VCC: XIAO 3V3
+- GND: FFC Pin 3
+- FFC Pin 6: 意図的にNC（未接続）
+
+同一電極面FFCでは、対向コネクタ側でpin orderが反転します。電源投入前に、必ずFFCの向きを確認してください。Pin 6をNCにしても、逆挿しに対する完全な保護にはなりません。
+
+---
+
 ## 📄 ライセンス
 
 This repository is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

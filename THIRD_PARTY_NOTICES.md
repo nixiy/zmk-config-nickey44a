@@ -29,3 +29,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+## zmk-driver-iqs7211e
+
+IQS7211E Trackpad driver by sekigon-gonnoc: [sekigon-gonnoc/zmk-driver-iqs7211e](https://github.com/sekigon-gonnoc/zmk-driver-iqs7211e)
+
+Copyright (c) 2025 sekigon-gonnoc
+
+SPDX-License-Identifier: GPL-2.0-or-later
