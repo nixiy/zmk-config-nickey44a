@@ -58,9 +58,8 @@ Keymap Editorでの変更をCommit（または `main` ブランチへPush）す�
 右手側のみ、sekigon-gonnoc IQS7211E low-power circular trackpad を実験的にサポートします。
 
 - I2C address: `0x56`
-- SDA: P0.09 / NFC1
-- SCL: P0.10 / NFC2
-- RDY: P0.16
+- 現在の切り分け用配線: SDA = D0 / P0.02、SCL = D1 / P0.03、RDY = D2 / P0.28
+- D1/D2をTrackpadへ再割り当てする切り分けのため、右側キーマトリクスは一時的に無効です。この状態では右側のキーは動作しません。
 - VCC: XIAO 3V3
 - GND: FFC Pin 3
 - FFC Pin 6: 意図的にNC（未接続）
