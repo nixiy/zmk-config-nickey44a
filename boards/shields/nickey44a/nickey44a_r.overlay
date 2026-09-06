@@ -53,6 +53,8 @@
 
         irq-gpios = <&gpio0 9 GPIO_PULL_UP>;
         power-gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
+        init-symbol = "nickey44a_iqs7211e_init";
+        init-length = <217>;
     };
 };
 
