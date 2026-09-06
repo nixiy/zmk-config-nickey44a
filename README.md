@@ -61,7 +61,7 @@ Keymap Editorでの変更をCommit（または `main` ブランチへPush）す�
 - 現在の切り分け用配線: SDA = NFC2 / P0.10、SCL = D6 / P1.11、RDY = NFC1 / P0.09
 - 動作実績のある初期化シーケンスを再現するため、`power-gpios` は D0 / P0.02 に設定しています。Trackpad VCCをD0へ接続していない場合、このGPIOは電源を制御しません。
 - D6をTrackpadへ再割り当てする切り分けのため、右側キーマトリクスのD6列はP1.10へ一時退避しています。この状態ではD6列のキーは動作しません。
-- 感度切り分け用に、IQS7211Eのtouch set/clear thresholdを標準の`0x14`/`0x0E`から`0x0C`/`0x08`へ下げたcustom init tableを使用しています。
+- 感度切り分け用に、IQS7211Eのtouch set/clear thresholdを標準の`0x14`/`0x0E`から`0x0C`/`0x08`へ、low-power ALP wake thresholdを`0x0008`から`0x0004`へ下げたcustom init tableを使用しています。
 - VCC: XIAO 3V3
 - GND: FFC Pin 3
 - FFC Pin 6: 意図的にNC（未接続）
