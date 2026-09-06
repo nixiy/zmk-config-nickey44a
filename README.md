@@ -63,6 +63,7 @@ Keymap Editorでの変更をCommit（または `main` ブランチへPush）す�
 - D6をTrackpadへ再割り当てする切り分けのため、右側キーマトリクスのD6列はP1.10へ一時退避しています。この状態ではD6列のキーは動作しません。
 - 通常操作の誤反応を抑えつつ復帰感度を保つため、IQS7211Eのtouch set/clear thresholdを標準の`0x14`/`0x0E`から`0x10`/`0x0A`へ、low-power ALP wake thresholdを`0x0008`から`0x0004`へ、ALP set debounceを4から1サンプルへ調整したcustom init tableを使用しています。
 - 2本指スクロールはinput processorで標準の約1/6に減速しています。ポインター移動速度には影響しません。
+- 指を離すフレームで稀に発生する異常な大きさのスクロール差分は、通常スクロールを維持したまま破棄します。
 - VCC: XIAO 3V3
 - GND: FFC Pin 3
 - FFC Pin 6: 意図的にNC（未接続）

@@ -60,10 +60,22 @@
 };
 
 / {
+    /*
+     * Discard a one-frame, implausibly large wheel delta sometimes reported
+     * by IQS7211E while the two-finger contact is released. This guard is
+     * deliberately after the 1/6 scroll scaler; 32 is therefore 192 raw
+     * sensor units and does not affect normal scrolling.
+     */
+    nickey44a_scroll_guard: nickey44a_scroll_guard {
+        compatible = "nixiy,input-processor-scroll-guard";
+        #input-processor-cells = <1>;
+    };
+
     trackpad_listener: trackpad_listener {
         compatible = "zmk,input-listener";
         device = <&trackpad>;
         /* Keep pointer speed unchanged; reduce two-finger wheel events to 1/6. */
-        input-processors = <&zip_scroll_scaler 1 6>;
+        input-processors = <&zip_scroll_scaler 1 6
+                            &nickey44a_scroll_guard 32>;
     };
 };

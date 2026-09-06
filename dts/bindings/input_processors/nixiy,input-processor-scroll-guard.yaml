@@ -1,0 +1,7 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+
+description: Discard anomalously large relative wheel deltas
+
+compatible: "nixiy,input-processor-scroll-guard"
+
+include: ip_one_param.yaml
