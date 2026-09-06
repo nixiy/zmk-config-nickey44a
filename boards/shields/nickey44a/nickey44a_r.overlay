@@ -5,30 +5,30 @@
 };
 
 &kscan0 {
-        /* Temporary Trackpad wiring test: D1 and D2 are reassigned below. */
+        /* Temporary Trackpad wiring test: D6 is reassigned to I2C SCL below. */
         col-gpios
-            = <&gpio1 0 GPIO_ACTIVE_HIGH>
-            , <&gpio1 10 GPIO_ACTIVE_HIGH>
+            = <&xiao_d 1 GPIO_ACTIVE_HIGH>
+            , <&xiao_d 2 GPIO_ACTIVE_HIGH>
             , <&xiao_d 3 GPIO_ACTIVE_HIGH>
             , <&xiao_d 4 GPIO_ACTIVE_HIGH>
             , <&xiao_d 5 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 6 GPIO_ACTIVE_HIGH>
+            , <&gpio1 10 GPIO_ACTIVE_HIGH>
             ;
 };
 
 &pinctrl {
     i2c0_default: i2c0_default {
         group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 0, 2)>,
-                    <NRF_PSEL(TWIM_SCL, 0, 3)>;
+            psels = <NRF_PSEL(TWIM_SDA, 0, 10)>,
+                    <NRF_PSEL(TWIM_SCL, 1, 11)>;
             bias-pull-up;
         };
     };
 
     i2c0_sleep: i2c0_sleep {
         group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 0, 2)>,
-                    <NRF_PSEL(TWIM_SCL, 0, 3)>;
+            psels = <NRF_PSEL(TWIM_SDA, 0, 10)>,
+                    <NRF_PSEL(TWIM_SCL, 1, 11)>;
             bias-pull-up;
             low-power-enable;
         };
@@ -51,7 +51,8 @@
         compatible = "azoteq,iqs7211e";
         reg = <0x56>;
 
-        irq-gpios = <&gpio0 28 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        irq-gpios = <&gpio0 9 GPIO_PULL_UP>;
+        power-gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
     };
 };
 

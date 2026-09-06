@@ -58,8 +58,9 @@ Keymap Editorでの変更をCommit（または `main` ブランチへPush）す�
 右手側のみ、sekigon-gonnoc IQS7211E low-power circular trackpad を実験的にサポートします。
 
 - I2C address: `0x56`
-- 現在の切り分け用配線: SDA = D0 / P0.02、SCL = D1 / P0.03、RDY = D2 / P0.28
-- D1/D2をTrackpadへ再割り当てする切り分けのため、右側キーマトリクスの先頭2列はP1.00/P1.10へ一時退避しています。この状態ではD1/D2列のキーは動作しません。
+- 現在の切り分け用配線: SDA = NFC2 / P0.10、SCL = D6 / P1.11、RDY = NFC1 / P0.09
+- 動作実績のある初期化シーケンスを再現するため、`power-gpios` は D0 / P0.02 に設定しています。Trackpad VCCをD0へ接続していない場合、このGPIOは電源を制御しません。
+- D6をTrackpadへ再割り当てする切り分けのため、右側キーマトリクスのD6列はP1.10へ一時退避しています。この状態ではD6列のキーは動作しません。
 - VCC: XIAO 3V3
 - GND: FFC Pin 3
 - FFC Pin 6: 意図的にNC（未接続）
