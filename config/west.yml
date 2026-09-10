@@ -9,10 +9,52 @@ manifest:
   projects:
     - name: zmk
       remote: cormoran
-      revision: 3931facea7507151a53f209ca4f8a717fa6bd400 # v0.3-branch+dya
-      import: app/west.yml
+      revision: main+dya
+      import:
+        file: app/west.yml
+    - name: zephyr
+      remote: cormoran
+      revision: v4.1.0+zmk-fixes+nrf-half-duplex-uart
+      clone-depth: 1
+      import:
+        name-blocklist:
+          - ci-tools
+          - hal_altera
+          - hal_cypress
+          - hal_infineon
+          - hal_microchip
+          - hal_nxp
+          - hal_openisa
+          - hal_xtensa
+          - hal_st
+          - hal_ti
+          - loramac-node
+          - mcuboot
+          - mcumgr
+          - net-tools
+          - openthread
+          - edtt
+          - trusted-firmware-m
+    - name: zmk-feature-custom-settings
+      remote: cormoran
+      revision: main
+    - name: zmk-feature-fast-keymap
+      remote: cormoran
+      revision: main
+    - name: zmk-feature-runtime-macro
+      remote: cormoran
+      revision: main
+    - name: zmk-feature-runtime-combo
+      remote: cormoran
+      revision: main
+    - name: zmk-feature-input-stream
+      remote: cormoran
+      revision: main
+    - name: zmk-feature-module-physical-layout
+      remote: cormoran
+      revision: main
     - name: zmk-rgbled-widget
       remote: caksoylar
-      revision: 8756cb7b8114069fa3c25c6f6c990f24988fceff # v0.3
+      revision: e6b467792a1dabef8cfa5c9fd26bfefc9c16662b # main, ZMK main compatible
   self:
     path: config

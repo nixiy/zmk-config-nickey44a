@@ -18,14 +18,14 @@
 #
 ---
 include:
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble//zmk
     shield: nickey44a_r rgbled_adapter
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: nickey44a_r
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble//zmk
     shield: nickey44a_l rgbled_adapter
     artifact-name: nickey44a_l
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble//zmk
     shield: settings_reset
     artifact-name: settings_reset
