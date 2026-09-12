@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/cormoran
     - name: caksoylar  # <-- RGB LED
       url-base: https://github.com/caksoylar
+    - name: nixiy
+      url-base: https://github.com/nixiy
   projects:
     - name: zmk
       remote: cormoran
@@ -14,5 +16,8 @@ manifest:
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: 8756cb7b8114069fa3c25c6f6c990f24988fceff # v0.3
+    - name: zmk-feature-battery-monitor
+      remote: nixiy
+      revision: c48fd535565f45914fedc52d231fcd043a31d51f
   self:
     path: config
