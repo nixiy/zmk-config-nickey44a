@@ -9,65 +9,52 @@ manifest:
   projects:
     - name: zmk
       remote: cormoran
-      revision: main+dya
+      # Tested ZMK 4.1/DYA Studio revision. Pinning prevents
+      # a future main+dya update from changing the firmware build.
+      revision: e5c9b6915b56801193e359dd9bad4a167ce0d1b8
       import:
         file: app/west.yml
-    - name: zephyr
-      remote: cormoran
-      revision: v4.1.0+zmk-fixes+nrf-half-duplex-uart
-      clone-depth: 1
-      import:
-        name-blocklist:
-          - ci-tools
-          - hal_altera
-          - hal_cypress
-          - hal_infineon
-          - hal_microchip
-          - hal_nxp
-          - hal_openisa
-          - hal_xtensa
-          - hal_st
-          - hal_ti
-          - loramac-node
-          - mcuboot
-          - mcumgr
-          - net-tools
-          - openthread
-          - edtt
-          - trusted-firmware-m
     - name: zmk-feature-custom-settings
       remote: cormoran
-      revision: main
+      # Pinned main at the ZMK 4.1/DYA Studio integration point.
+      revision: c6a7fef3a3be3d3ace5de9a4b0628c6418cd1f3f
     - name: zmk-feature-fast-keymap
       remote: cormoran
-      revision: main
+      # Tested ZMK 4.1/DYA Studio revision.
+      revision: 8dac76de0ba38588ba39ca498910e24f8332bc6b
     - name: zmk-feature-runtime-macro
       remote: cormoran
-      revision: main
+      # Tested ZMK 4.1/DYA Studio revision.
+      revision: 38530962eb7061b60efcb98e84585cfb1f0cb6de
     - name: zmk-feature-runtime-combo
       remote: cormoran
-      revision: main
+      # Tested ZMK 4.1/DYA Studio revision.
+      revision: d9490e7b5d41c516221d131241009e81740efcee
     - name: zmk-feature-input-stream
       remote: cormoran
-      revision: main
+      # Tested ZMK 4.1/DYA Studio revision.
+      revision: aeb015908a42a7615ccdccc7feb3a10d23132a71
     - name: zmk-feature-module-physical-layout
       remote: cormoran
-      revision: main
+      # Tested ZMK 4.1/DYA Studio revision.
+      revision: 4f18de45dc27820725d267916b4cdacc0e0b6cf9
     - name: zmk-module-ble-management
       remote: cormoran
-      revision: main
+      # Tested ZMK 4.1/DYA Studio revision.
+      revision: 57738cc4fc6ba80e82a7ac57741a0339cb186cd4
     - name: zmk-feature-default-layer
       remote: cormoran
-      revision: codex/custom-rpc-rewrite
+      # Required by CONFIG_ZMK_FAST_KEYMAP_DEFAULT_LAYER; tested revision.
+      revision: 92728246f80d327709839b2dbf5cf11880ff87e1
     - name: zmk-feature-os-detection
       remote: cormoran
-      revision: main
+      # Retained because Nickey44A explicitly exposes its Studio RPC settings;
+      # pinned instead of tracking main.
+      revision: 3052679f645b8fc1997275c2eaa6b86bdd55ca01
     - name: zmk-feature-device-info
       remote: cormoran
-      revision: main
-    - name: zmk-feature-watchdog
-      remote: cormoran
-      revision: main
+      # Retained as a Studio diagnostics capability; tested revision.
+      revision: 8cedd2dd9f04e19ea5a17b94914dd47a09d8db11
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: e6b467792a1dabef8cfa5c9fd26bfefc9c16662b # main, ZMK main compatible
