@@ -24,14 +24,12 @@
     };
 };
 
-/* Temporarily disable the matrix so its D6/P1.11 column cannot drive NRST. */
+/*
+ * Keep a kscan device for ZMK's physical-layout support, but leave its
+ * D6/P1.11 column disconnected so it cannot drive the TPS43 NRST line.
+ */
 &kscan0 {
-    status = "disabled";
-};
-
-/* A disabled kscan has no Zephyr device, so it must not be in the layout. */
-&physical_layout0 {
-    /delete-property/ kscan;
+    status = "okay";
 };
 
 / {
@@ -77,6 +75,5 @@
             , <&xiao_d 3 GPIO_ACTIVE_HIGH>
             , <&xiao_d 4 GPIO_ACTIVE_HIGH>
             , <&xiao_d 5 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 6 GPIO_ACTIVE_HIGH>
             ;
 };
