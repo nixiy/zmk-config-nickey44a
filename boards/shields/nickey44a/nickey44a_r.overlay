@@ -3,8 +3,8 @@
 
 /*
  * TPS43 FPC breakout wiring:
- *   SCL   = P1.00, SDA   = P0.16, RDY  = P1.10, NRST = P1.11.
- * P1.11 is XIAO D6, which is otherwise used by the keyboard matrix.
+ *   SCL = P1.00, SDA = P0.16, RDY = P1.10.
+ * NRST is held high in hardware and is not controlled by the MCU.
  */
 
 &pinctrl {
@@ -22,14 +22,6 @@
             low-power-enable;
         };
     };
-};
-
-/*
- * Keep a kscan device for ZMK's physical-layout support, but leave its
- * D6/P1.11 column disconnected so it cannot drive the TPS43 NRST line.
- */
-&kscan0 {
-    status = "okay";
 };
 
 / {
@@ -52,7 +44,6 @@
     tps43: iqs5xx@74 {
         compatible = "azoteq,iqs5xx";
         reg = <0x74>;
-        reset-gpios = <&gpio1 11 GPIO_ACTIVE_LOW>;
         rdy-gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>;
 
         one-finger-tap;
@@ -61,6 +52,9 @@
         scroll;
         natural-scroll-x;
         natural-scroll-y;
+
+        bottom-beta = <5>;
+        stationary-threshold = <5>;
     };
 };
 
@@ -75,5 +69,6 @@
             , <&xiao_d 3 GPIO_ACTIVE_HIGH>
             , <&xiao_d 4 GPIO_ACTIVE_HIGH>
             , <&xiao_d 5 GPIO_ACTIVE_HIGH>
+            , <&xiao_d 6 GPIO_ACTIVE_HIGH>
             ;
 };
