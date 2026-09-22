@@ -29,6 +29,11 @@
     status = "disabled";
 };
 
+/* A disabled kscan has no Zephyr device, so it must not be in the layout. */
+&physical_layout0 {
+    /delete-property/ kscan;
+};
+
 / {
     tps43_listener: tps43_listener {
         compatible = "zmk,input-listener";
