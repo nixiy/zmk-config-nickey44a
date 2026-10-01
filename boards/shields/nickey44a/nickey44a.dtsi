@@ -92,11 +92,13 @@
 };
 
 &vbatt {
-    compatible = "zmk,battery-voltage-divider";
+    compatible = "nixiy,battery-monitor";
     io-channels = <&adc 0>;
     /delete-property/ power-gpios;
     output-ohms = <470000>;
     full-ohms = <(1000000 + 470000)>;
     // Ni-MH向けにチューニング
     mv-to-pct-thresholds = <1000 1120 1170 1190 1210 1230 1250 1270 1290 1330 1400>;
+    smoothing-factor = <8>;
+    battery-replacement-threshold-mv = <150>;
 };
