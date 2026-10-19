@@ -85,7 +85,7 @@
         compatible = "azoteq,tps43";
         reg = <0x74>;
         rst-gpios = <&gpio0 19 GPIO_ACTIVE_HIGH>;
-        rdy-gpios = <&gpio1 15 GPIO_ACTIVE_HIGH>;
+        rdy-gpios = <&gpio0 15 GPIO_ACTIVE_HIGH>;
 
         press-and-hold;
         two-finger-tap;
